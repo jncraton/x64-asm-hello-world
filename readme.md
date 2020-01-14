@@ -1,7 +1,7 @@
 x64 Assembly Hello World
 ========================
 
-This is a simply "Hello World" program written in x64 Linux Assembly.
+This is a basic "Hello World" program written in x64 Linux Assembly.
 
 Compiling
 ---------
