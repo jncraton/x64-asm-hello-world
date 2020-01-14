@@ -1,5 +1,6 @@
+all: hello
+
 CCFLAGS=-s -static -nostdlib 
-all: test
 
 test: hello
 	./$< > output.txt
