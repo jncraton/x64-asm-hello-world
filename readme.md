@@ -33,7 +33,7 @@ Modify the program to produce the following output:
     8
     9
 
-This should probably be accomplished using a conditonal jump and an incrementing variable likely stored in the [bss section](https://en.wikipedia.org/wiki/.bss). Solutions that simply hardcode this output are unsatisfactory.
+This should probably be accomplished using a conditonal jump or branch and an incrementing value likely stored in the [bss section](https://en.wikipedia.org/wiki/.bss). Solutions that simply hardcode this output are unsatisfactory.
 
 A test is included to verify completion of this assignment. Once you have appropriately modified `hello.s`, the following command should succeed:
 
