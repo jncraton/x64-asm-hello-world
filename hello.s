@@ -1,17 +1,35 @@
 .global	_start
 
 _start:
-  # write(stdout, msg, 14)
-  mov $1, %rax # sys_write
-  mov $1, %rdi # stdout
-  mov $msg, %rsi # string buffer
-  mov $14, %rdx # length of string
-  syscall
-  
-  # exit(0)
-  mov $60,%rax # exit
-  mov $0,%rdi # exit code 0
-  syscall
+	mov $1, %rax
+	mov $1, %rdi
+	mov $msg, %rsi
+	mov $14, %rdx
+	syscall
+
+  mov $0x0a31, %r10
+  mov $count, %rsi
+
+  loop:
+    mov %r10, (%rsi)
+
+  	mov $1, %rax
+  	mov $1, %rdi
+  	mov $count, %rsi
+  	mov $2, %rdx
+  	syscall
+
+    add $1, %r10
+
+  	cmp $0x0a34, %r10
+  	jl loop
+
+	mov $60,%rax
+	mov $0,%rdi
+	syscall
 
 msg:
-  .ascii "Hello, world!\n"
+	.ascii "Hello, world!\n"
+
+# Allocate loop counter
+.lcomm count 8
