@@ -3,6 +3,13 @@ x64 Assembly Hello World
 
 This is a basic "Hello World" program written in x64 Linux Assembly.
 
+## Learning Outcomes
+
+After completing this assignment, students will be able to:
+
+1. Describe the benefits of high level languages
+2. Identify assembly language programs
+
 Compiling
 ---------
 
