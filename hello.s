@@ -1,10 +1,10 @@
 .section .data
 
 msg:
-    .ascii "Hello, world!\n"
+  .ascii "Hello, world!\n"
 
 .section .bss
-    .lcomm buffer, 8
+  .lcomm buffer, 8
 
 .section .text
 
