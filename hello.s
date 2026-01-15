@@ -3,9 +3,6 @@
 msg:
   .ascii "Hello, world!\n"
 
-.section .bss
-  .lcomm buffer, 8
-
 .section .text
 
 .global _start
@@ -17,8 +14,8 @@ _start:
   movq $14, %rdx
   syscall
 
-  movq $buffer, %rsi
-  movq $0x0a31, (%rsi)
+  pushq $0x0a31
+  movq %rsp, %rsi
 
   loop:
     movq $1, %rax
