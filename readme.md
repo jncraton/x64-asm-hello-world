@@ -38,13 +38,9 @@ Modify the program to produce the following output:
 
     Hello, world!
     1
-    2
     3
-    4
     5
-    6
     7
-    8
     9
 
 A test is included to verify completion of this assignment. Once you have appropriately modified `hello.s`, the following command should succeed:
