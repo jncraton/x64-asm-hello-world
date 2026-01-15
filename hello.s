@@ -1,10 +1,7 @@
 .section .data
-
-msg:
-  .ascii "Hello, world!\n"
+msg: .ascii "Hello, world!\n"
 
 .section .text
-
 .global _start
 
 _start:
@@ -28,6 +25,6 @@ _start:
     cmpq $0x0a34, (%rsi)
     jl loop
 
-  movq $60,%rax
-  movq $0,%rdi
+  movq $60, %rax
+  movq $0, %rdi
   syscall
