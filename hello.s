@@ -1,3 +1,13 @@
+.section .data
+
+msg:
+    .ascii "Hello, world!\n"
+
+.section .bss
+    .lcomm buffer, 8
+
+.section .text
+
 .global _start
 
 _start:
@@ -7,7 +17,7 @@ _start:
   movq $14, %rdx
   syscall
 
-  movq $count, %rsi
+  movq $buffer, %rsi
   movq $0x0a31, (%rsi)
 
   loop:
@@ -24,9 +34,3 @@ _start:
   movq $60,%rax
   movq $0,%rdi
   syscall
-
-msg:
-  .ascii "Hello, world!\n"
-
-# Allocate loop counter
-.lcomm count 8
