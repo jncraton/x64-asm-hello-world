@@ -51,6 +51,8 @@ A test is included to verify completion of this assignment. Once you have approp
 
 `make test`
 
+Extra challenge: If you are able to implement counting to 9 quickly and easily, try modifying the program to count to 99.
+
 Reference Material
 ------------------
 
