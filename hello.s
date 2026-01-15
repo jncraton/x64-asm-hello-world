@@ -12,11 +12,11 @@ _start:
   syscall
 
   pushq $0x0a31
-  movq %rsp, %rsi
 
   loop:
     movq $1, %rax
     movq $1, %rdi
+    movq %rsp, %rsi
     movq $2, %rdx
     syscall
 
